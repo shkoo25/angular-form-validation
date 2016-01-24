@@ -3,6 +3,10 @@ angular.module("validationApp", [])
 
 		$scope.invalid = {}
 
+		$scope.$watch( "name", function(newer , older) {
+				console.log (newer, older);
+			}, true)
+
 		$scope.submitNewPerson = function(){
 			console.log("clicked")
 
@@ -18,7 +22,7 @@ angular.module("validationApp", [])
 				return
 			}
 
-				
+
 			$scope.name =""
 			$scope.email = ""
 			$scope.website = ""
@@ -35,9 +39,6 @@ angular.module("validationApp", [])
 			website: $scope.website,
 			message: $scope.message
 			})*/
-
-
-
 
 
 
